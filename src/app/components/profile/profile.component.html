@@ -1,0 +1,16 @@
+<div class="container-fluid" *ngIf="user">
+    <div class="user-card">
+        <div class="avatarMask float-left mr-3" *ngIf="identity.image">
+            <img class="avatar" src="{{url + 'user/avatar/' + identity.image}}" />
+        </div>
+        <div class="data-mask float-left">
+            <h1>{{user.name + ' '  + user.surname}}</h1>
+            <p [innerHtml]="user.description"></p>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <hr>
+
+    <app-post-list [posts]="posts" [identity]="identity" [token]="token" [url]="url" type="profile">
+    </app-post-list>
+</div>

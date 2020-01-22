@@ -1,0 +1,12 @@
+<div class="container-fluid">
+    <h1>{{pageTitle}}</h1>
+    <hr>
+    
+    <app-post-list  
+        [posts]="posts"
+        [identity]="identity"
+        [token]="token"
+        [url]="url"
+        type="home">
+    </app-post-list>
+</div>

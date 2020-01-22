@@ -1,0 +1,23 @@
+.card-columns {
+  @media (min-width: 992px) {
+    column-count: 2;
+  }
+  @media (max-width: 992px) {
+    column-count: 1;
+  }
+  .card {
+    height: 410px;
+    .card-header a {
+      color: #444;
+    }
+    .box-image {
+      height: 250px;
+      overflow: hidden;
+      img {
+        height:250px;
+        width: auto;
+        object-fit: contain;
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+<div class="loading" *ngIf="!post">
+        Cargando...
+    </div>
+    
+    <div class="container-fluid" *ngIf="post">
+        <h1>{{post.title}}</h1>
+        <p>
+            {{post.category.name}} - <a [routerLink]="['/profile', post.user_id]">{{post.user.name + ' '  + post.user.surname}}</a>
+        </p>
+        <hr>
+        <p [innerHtml]="post.content"></p>
+    </div>
